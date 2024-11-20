@@ -1,25 +1,38 @@
+/* General body styling with dynamic background color */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background: linear-gradient(45deg, #f5f5f5, #e3f2fd);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
     margin: 0;
     padding: 0;
 }
 
+/* Animation for the dynamic background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Center container with shadows and rounded corners */
 .container {
     width: 80%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 50px auto;
     background-color: #fff;
-    margin-top: 50px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
+/* Heading styles */
 h1, h2 {
     color: #2c3e50;
+    text-align: center;
 }
 
+/* Form styling */
 form {
     margin-bottom: 20px;
 }
@@ -28,34 +41,51 @@ label {
     display: block;
     margin-bottom: 5px;
     color: #34495e;
+    font-weight: bold;
 }
 
-input {
+/* Input styling */
+input, select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+input:focus, select:focus {
+    background-color: #eafaf1;
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.5);
+}
+
+/* Button styling */
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #27ae60;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #2ecc71;
+    transform: scale(1.05);
 }
 
+/* Unordered list for suggestions */
 ul {
     list-style-type: disc;
     padding-left: 20px;
+    margin-top: 20px;
 }
 
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -64,11 +94,32 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
 }
 
 th {
     background-color: #27ae60;
     color: white;
+    font-size: 16px;
+}
+
+td {
+    font-size: 14px;
+}
+
+/* Adding hover effect to table rows */
+tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Rounded corners for select dropdown */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><polygon fill="%23ccc" points="0,0 20,0 10,10"/></svg>') no-repeat right 10px center;
+    background-size: 12px;
+    cursor: pointer;
 }
