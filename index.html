@@ -12,14 +12,41 @@
         <p>Use this calculator to estimate your carbon footprint and discover ways to reduce it.</p>
 
         <form id="calculatorForm">
-            <label for="transport">Transport (miles driven per week):</label>
+            <label for="transport">Transport (km driven per week):</label>
             <input type="number" id="transport" name="transport" min="0" step="0.1" required><br>
+
+            <label for="vehicleType">Vehicle Type:</label>
+            <select id="vehicleType" name="vehicleType">
+                <option value="petrol">Petrol</option>
+                <option value="diesel">Diesel</option>
+                <option value="electric">Electric</option>
+            </select><br>
 
             <label for="electricity">Electricity (kWh per month):</label>
             <input type="number" id="electricity" name="electricity" min="0" step="0.1" required><br>
 
-            <label for="meat">Meat consumption (pounds per week):</label>
+            <label for="electricitySource">Electricity Source:</label>
+            <select id="electricitySource" name="electricitySource">
+                <option value="coal">Coal</option>
+                <option value="hydro">Hydro</option>
+            </select><br>
+
+            <label for="meat">Meat consumption (kg per week):</label>
             <input type="number" id="meat" name="meat" min="0" step="0.1" required><br>
+
+            <label for="meatType">Meat Type:</label>
+            <select id="meatType" name="meatType">
+                <option value="beef">Beef</option>
+                <option value="chicken">Chicken</option>
+                <option value="lamb">Lamb</option>
+                <option value="fish">Fish</option>
+            </select><br>
+
+            <label for="packedFood">Packed Food Consumption (items per week):</label>
+            <input type="number" id="packedFood" name="packedFood" min="0" step="1" required><br>
+
+            <label for="internet">Internet Usage (hours per day):</label>
+            <input type="number" id="internet" name="internet" min="0" step="0.1" required><br>
 
             <button type="submit">Calculate</button>
         </form>
@@ -28,10 +55,13 @@
 
         <h2>Suggestions to Reduce Carbon Footprint</h2>
         <ul>
-            <li>Consider using public transport or carpooling.</li>
-            <li>Switch to energy-efficient light bulbs.</li>
-            <li>Reduce meat consumption and opt for plant-based meals.</li>
-            <li>Recycle and reuse materials.</li>
+            <li>Consider using public transport, carpooling, or switching to an electric vehicle.</li>
+            <li>Use electricity from renewable sources like hydro or solar energy.</li>
+            <li>Reduce meat consumption, especially red meats like beef and lamb, and opt for plant-based meals.</li>
+            <li>Limit packed food and choose fresh, local produce to reduce packaging waste.</li>
+            <li>Optimize internet usage by downloading content instead of streaming.</li>
+            <li>Switch to energy-efficient appliances and light bulbs.</li>
+            <li>Recycle and reuse materials whenever possible.</li>
             <li>Plant trees and support reforestation projects.</li>
         </ul>
 
@@ -45,16 +75,52 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1 mile driven (average car)</td>
-                    <td>0.411</td>
+                    <td>1 km driven (petrol car)</td>
+                    <td>0.192</td>
+                </tr>
+                <tr>
+                    <td>1 km driven (diesel car)</td>
+                    <td>0.196</td>
+                </tr>
+                <tr>
+                    <td>1 km driven (electric car, coal electricity)</td>
+                    <td>0.12</td>
+                </tr>
+                <tr>
+                    <td>1 km driven (electric car, hydro electricity)</td>
+                    <td>0.03</td>
                 </tr>
                 <tr>
                     <td>1 kWh of electricity (coal plant)</td>
                     <td>0.984</td>
                 </tr>
                 <tr>
-                    <td>1 pound of beef</td>
-                    <td>13.3</td>
+                    <td>1 kWh of electricity (hydro plant)</td>
+                    <td>0.024</td>
+                </tr>
+                <tr>
+                    <td>1 kg of beef</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>1 kg of chicken</td>
+                    <td>6.9</td>
+                </tr>
+                <tr>
+                    <td>1 kg of lamb</td>
+                    <td>39.2</td>
+                </tr>
+                <tr>
+                    <td>1 kg of fish</td>
+                    <td>5.2</td>
+                </tr>
+                <tr>
+                    <td>1 packed food item</td>
+                    <td>0.25</td>
+                </tr>
+                <tr>
+                    <td>1 hour of internet usage</td>
+                    <td>0.06</td>
                 </tr>
             </tbody>
         </table>
