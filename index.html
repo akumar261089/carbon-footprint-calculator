@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Carbon Footprint Calculator</h1>
+        <p>Use this calculator to estimate your carbon footprint and discover ways to reduce it.</p>
+
+        <form id="calculatorForm">
+            <label for="transport">Transport (miles driven per week):</label>
+            <input type="number" id="transport" name="transport" min="0" step="0.1" required><br>
+
+            <label for="electricity">Electricity (kWh per month):</label>
+            <input type="number" id="electricity" name="electricity" min="0" step="0.1" required><br>
+
+            <label for="meat">Meat consumption (pounds per week):</label>
+            <input type="number" id="meat" name="meat" min="0" step="0.1" required><br>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <h2 id="result"></h2>
+
+        <h2>Suggestions to Reduce Carbon Footprint</h2>
+        <ul>
+            <li>Consider using public transport or carpooling.</li>
+            <li>Switch to energy-efficient light bulbs.</li>
+            <li>Reduce meat consumption and opt for plant-based meals.</li>
+            <li>Recycle and reuse materials.</li>
+            <li>Plant trees and support reforestation projects.</li>
+        </ul>
+
+        <h2>Carbon Footprint of Common Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Carbon Footprint (kg CO2e)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1 mile driven (average car)</td>
+                    <td>0.411</td>
+                </tr>
+                <tr>
+                    <td>1 kWh of electricity (coal plant)</td>
+                    <td>0.984</td>
+                </tr>
+                <tr>
+                    <td>1 pound of beef</td>
+                    <td>13.3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
